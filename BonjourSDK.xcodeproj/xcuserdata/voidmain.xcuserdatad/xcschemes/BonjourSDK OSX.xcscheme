@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DFAD5D8719EA0F0F00DE514E"
-               BuildableName = "BonjourSDK OSX.framework"
+               BuildableName = "BonjourSDK_OSX.framework"
                BlueprintName = "BonjourSDK OSX"
                ReferencedContainer = "container:BonjourSDK.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DFAD5D8719EA0F0F00DE514E"
-            BuildableName = "BonjourSDK OSX.framework"
+            BuildableName = "BonjourSDK_OSX.framework"
             BlueprintName = "BonjourSDK OSX"
             ReferencedContainer = "container:BonjourSDK.xcodeproj">
          </BuildableReference>
@@ -61,7 +61,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DFAD5D8719EA0F0F00DE514E"
-            BuildableName = "BonjourSDK OSX.framework"
+            BuildableName = "BonjourSDK_OSX.framework"
             BlueprintName = "BonjourSDK OSX"
             ReferencedContainer = "container:BonjourSDK.xcodeproj">
          </BuildableReference>

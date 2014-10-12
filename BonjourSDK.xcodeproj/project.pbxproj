@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DFAD5D7019EA0EF600DE514E /* BonjourSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = DFAD5D6F19EA0EF600DE514E /* BonjourSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFAD5D8D19EA0F0F00DE514E /* BonjourSDK OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = DFAD5D8C19EA0F0F00DE514E /* BonjourSDK OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFAD5D7019EA0EF600DE514E /* BonjourSDK_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DFAD5D6F19EA0EF600DE514E /* BonjourSDK_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFAD5D8D19EA0F0F00DE514E /* BonjourSDK_OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = DFAD5D8C19EA0F0F00DE514E /* BonjourSDK_OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DFAD5DA619EA0FD700DE514E /* BSBonjourManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DFAD5DA419EA0FD700DE514E /* BSBonjourManager.h */; };
 		DFAD5DA719EA0FD700DE514E /* BSBonjourManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAD5DA519EA0FD700DE514E /* BSBonjourManager.m */; };
+		DFAD5DB519EA284700DE514E /* BSBonjourManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DFAD5DA419EA0FD700DE514E /* BSBonjourManager.h */; };
+		DFAD5DB619EA287B00DE514E /* BSBonjourManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAD5DA519EA0FD700DE514E /* BSBonjourManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DFAD5D6A19EA0EF600DE514E /* BonjourSDK_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BonjourSDK_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAD5D6E19EA0EF600DE514E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFAD5D6F19EA0EF600DE514E /* BonjourSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BonjourSDK.h; sourceTree = "<group>"; };
+		DFAD5D6F19EA0EF600DE514E /* BonjourSDK_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BonjourSDK_iOS.h; sourceTree = "<group>"; };
 		DFAD5D8819EA0F0F00DE514E /* BonjourSDK_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BonjourSDK_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAD5D8B19EA0F0F00DE514E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFAD5D8C19EA0F0F00DE514E /* BonjourSDK OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BonjourSDK OSX.h"; sourceTree = "<group>"; };
+		DFAD5D8C19EA0F0F00DE514E /* BonjourSDK_OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BonjourSDK_OSX.h; sourceTree = "<group>"; };
 		DFAD5DA419EA0FD700DE514E /* BSBonjourManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBonjourManager.h; sourceTree = "<group>"; };
 		DFAD5DA519EA0FD700DE514E /* BSBonjourManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBonjourManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,7 +66,7 @@
 		DFAD5D6C19EA0EF600DE514E /* BonjourSDK iOS */ = {
 			isa = PBXGroup;
 			children = (
-				DFAD5D6F19EA0EF600DE514E /* BonjourSDK.h */,
+				DFAD5D6F19EA0EF600DE514E /* BonjourSDK_iOS.h */,
 				DFAD5D6D19EA0EF600DE514E /* Supporting Files */,
 			);
 			path = "BonjourSDK iOS";
@@ -81,7 +83,7 @@
 		DFAD5D8919EA0F0F00DE514E /* BonjourSDK OSX */ = {
 			isa = PBXGroup;
 			children = (
-				DFAD5D8C19EA0F0F00DE514E /* BonjourSDK OSX.h */,
+				DFAD5D8C19EA0F0F00DE514E /* BonjourSDK_OSX.h */,
 				DFAD5D8A19EA0F0F00DE514E /* Supporting Files */,
 			);
 			path = "BonjourSDK OSX";
@@ -111,7 +113,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFAD5D7019EA0EF600DE514E /* BonjourSDK.h in Headers */,
+				DFAD5D7019EA0EF600DE514E /* BonjourSDK_iOS.h in Headers */,
 				DFAD5DA619EA0FD700DE514E /* BSBonjourManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,7 +122,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFAD5D8D19EA0F0F00DE514E /* BonjourSDK OSX.h in Headers */,
+				DFAD5D8D19EA0F0F00DE514E /* BonjourSDK_OSX.h in Headers */,
+				DFAD5DB519EA284700DE514E /* BSBonjourManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFAD5DB619EA287B00DE514E /* BSBonjourManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +355,7 @@
 		DFAD5D9919EA0F0F00DE514E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -364,7 +369,7 @@
 				INFOPLIST_FILE = "BonjourSDK OSX/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = BonjourSDK_OSX;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -374,6 +379,7 @@
 		DFAD5D9A19EA0F0F00DE514E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -384,7 +390,7 @@
 				INFOPLIST_FILE = "BonjourSDK OSX/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = BonjourSDK_OSX;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -410,6 +416,7 @@
 				DFAD5D7F19EA0EF600DE514E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DFAD5D9819EA0F0F00DE514E /* Build configuration list for PBXNativeTarget "BonjourSDK OSX" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +425,7 @@
 				DFAD5D9A19EA0F0F00DE514E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
