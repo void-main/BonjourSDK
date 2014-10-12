@@ -8,16 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		DFAD5D7019EA0EF600DE514E /* BonjourSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = DFAD5D6F19EA0EF600DE514E /* BonjourSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFAD5D7A19EA0EF600DE514E /* BonjourSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAD5D7919EA0EF600DE514E /* BonjourSDKTests.m */; };
+		DFAD5D8D19EA0F0F00DE514E /* BonjourSDK OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = DFAD5D8C19EA0F0F00DE514E /* BonjourSDK OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFAD5DA619EA0FD700DE514E /* BSBonjourManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DFAD5DA419EA0FD700DE514E /* BSBonjourManager.h */; };
+		DFAD5DA719EA0FD700DE514E /* BSBonjourManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAD5DA519EA0FD700DE514E /* BSBonjourManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DFAD5D6A19EA0EF600DE514E /* BonjourSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BonjourSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFAD5D6A19EA0EF600DE514E /* BonjourSDK_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BonjourSDK_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAD5D6E19EA0EF600DE514E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFAD5D6F19EA0EF600DE514E /* BonjourSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BonjourSDK.h; sourceTree = "<group>"; };
-		DFAD5D7519EA0EF600DE514E /* BonjourSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonjourSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFAD5D7819EA0EF600DE514E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFAD5D7919EA0EF600DE514E /* BonjourSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BonjourSDKTests.m; sourceTree = "<group>"; };
+		DFAD5D8819EA0F0F00DE514E /* BonjourSDK_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BonjourSDK_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFAD5D8B19EA0F0F00DE514E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFAD5D8C19EA0F0F00DE514E /* BonjourSDK OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BonjourSDK OSX.h"; sourceTree = "<group>"; };
+		DFAD5DA419EA0FD700DE514E /* BSBonjourManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBonjourManager.h; sourceTree = "<group>"; };
+		DFAD5DA519EA0FD700DE514E /* BSBonjourManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBonjourManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,7 +32,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFAD5D7219EA0EF600DE514E /* Frameworks */ = {
+		DFAD5D8419EA0F0F00DE514E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,8 +45,9 @@
 		DFAD5D6019EA0EF600DE514E = {
 			isa = PBXGroup;
 			children = (
-				DFAD5D6C19EA0EF600DE514E /* BonjourSDK */,
-				DFAD5D7619EA0EF600DE514E /* BonjourSDKTests */,
+				DFAD5DA319EA0FD700DE514E /* BonjourSDK */,
+				DFAD5D6C19EA0EF600DE514E /* BonjourSDK iOS */,
+				DFAD5D8919EA0F0F00DE514E /* BonjourSDK OSX */,
 				DFAD5D6B19EA0EF600DE514E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,19 +55,19 @@
 		DFAD5D6B19EA0EF600DE514E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DFAD5D6A19EA0EF600DE514E /* BonjourSDK.framework */,
-				DFAD5D7519EA0EF600DE514E /* BonjourSDKTests.xctest */,
+				DFAD5D6A19EA0EF600DE514E /* BonjourSDK_iOS.framework */,
+				DFAD5D8819EA0F0F00DE514E /* BonjourSDK_OSX.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DFAD5D6C19EA0EF600DE514E /* BonjourSDK */ = {
+		DFAD5D6C19EA0EF600DE514E /* BonjourSDK iOS */ = {
 			isa = PBXGroup;
 			children = (
 				DFAD5D6F19EA0EF600DE514E /* BonjourSDK.h */,
 				DFAD5D6D19EA0EF600DE514E /* Supporting Files */,
 			);
-			path = BonjourSDK;
+			path = "BonjourSDK iOS";
 			sourceTree = "<group>";
 		};
 		DFAD5D6D19EA0EF600DE514E /* Supporting Files */ = {
@@ -73,21 +78,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DFAD5D7619EA0EF600DE514E /* BonjourSDKTests */ = {
+		DFAD5D8919EA0F0F00DE514E /* BonjourSDK OSX */ = {
 			isa = PBXGroup;
 			children = (
-				DFAD5D7919EA0EF600DE514E /* BonjourSDKTests.m */,
-				DFAD5D7719EA0EF600DE514E /* Supporting Files */,
+				DFAD5D8C19EA0F0F00DE514E /* BonjourSDK OSX.h */,
+				DFAD5D8A19EA0F0F00DE514E /* Supporting Files */,
 			);
-			path = BonjourSDKTests;
+			path = "BonjourSDK OSX";
 			sourceTree = "<group>";
 		};
-		DFAD5D7719EA0EF600DE514E /* Supporting Files */ = {
+		DFAD5D8A19EA0F0F00DE514E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DFAD5D7819EA0EF600DE514E /* Info.plist */,
+				DFAD5D8B19EA0F0F00DE514E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFAD5DA319EA0FD700DE514E /* BonjourSDK */ = {
+			isa = PBXGroup;
+			children = (
+				DFAD5DA419EA0FD700DE514E /* BSBonjourManager.h */,
+				DFAD5DA519EA0FD700DE514E /* BSBonjourManager.m */,
+			);
+			path = BonjourSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,15 +112,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFAD5D7019EA0EF600DE514E /* BonjourSDK.h in Headers */,
+				DFAD5DA619EA0FD700DE514E /* BSBonjourManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFAD5D8519EA0F0F00DE514E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFAD5D8D19EA0F0F00DE514E /* BonjourSDK OSX.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DFAD5D6919EA0EF600DE514E /* BonjourSDK */ = {
+		DFAD5D6919EA0EF600DE514E /* BonjourSDK iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DFAD5D7D19EA0EF600DE514E /* Build configuration list for PBXNativeTarget "BonjourSDK" */;
+			buildConfigurationList = DFAD5D7D19EA0EF600DE514E /* Build configuration list for PBXNativeTarget "BonjourSDK iOS" */;
 			buildPhases = (
 				DFAD5D6519EA0EF600DE514E /* Sources */,
 				DFAD5D6619EA0EF600DE514E /* Frameworks */,
@@ -117,27 +140,28 @@
 			);
 			dependencies = (
 			);
-			name = BonjourSDK;
+			name = "BonjourSDK iOS";
 			productName = BonjourSDK;
-			productReference = DFAD5D6A19EA0EF600DE514E /* BonjourSDK.framework */;
+			productReference = DFAD5D6A19EA0EF600DE514E /* BonjourSDK_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DFAD5D7419EA0EF600DE514E /* BonjourSDKTests */ = {
+		DFAD5D8719EA0F0F00DE514E /* BonjourSDK OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DFAD5D8019EA0EF600DE514E /* Build configuration list for PBXNativeTarget "BonjourSDKTests" */;
+			buildConfigurationList = DFAD5D9819EA0F0F00DE514E /* Build configuration list for PBXNativeTarget "BonjourSDK OSX" */;
 			buildPhases = (
-				DFAD5D7119EA0EF600DE514E /* Sources */,
-				DFAD5D7219EA0EF600DE514E /* Frameworks */,
-				DFAD5D7319EA0EF600DE514E /* Resources */,
+				DFAD5D8319EA0F0F00DE514E /* Sources */,
+				DFAD5D8419EA0F0F00DE514E /* Frameworks */,
+				DFAD5D8519EA0F0F00DE514E /* Headers */,
+				DFAD5D8619EA0F0F00DE514E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = BonjourSDKTests;
-			productName = BonjourSDKTests;
-			productReference = DFAD5D7519EA0EF600DE514E /* BonjourSDKTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = "BonjourSDK OSX";
+			productName = "BonjourSDK OSX";
+			productReference = DFAD5D8819EA0F0F00DE514E /* BonjourSDK_OSX.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -151,7 +175,7 @@
 					DFAD5D6919EA0EF600DE514E = {
 						CreatedOnToolsVersion = 6.0;
 					};
-					DFAD5D7419EA0EF600DE514E = {
+					DFAD5D8719EA0F0F00DE514E = {
 						CreatedOnToolsVersion = 6.0;
 					};
 				};
@@ -168,8 +192,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DFAD5D6919EA0EF600DE514E /* BonjourSDK */,
-				DFAD5D7419EA0EF600DE514E /* BonjourSDKTests */,
+				DFAD5D6919EA0EF600DE514E /* BonjourSDK iOS */,
+				DFAD5D8719EA0F0F00DE514E /* BonjourSDK OSX */,
 			);
 		};
 /* End PBXProject section */
@@ -182,7 +206,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFAD5D7319EA0EF600DE514E /* Resources */ = {
+		DFAD5D8619EA0F0F00DE514E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -196,14 +220,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFAD5DA719EA0FD700DE514E /* BSBonjourManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFAD5D7119EA0EF600DE514E /* Sources */ = {
+		DFAD5D8319EA0F0F00DE514E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFAD5D7A19EA0EF600DE514E /* BonjourSDKTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,10 +325,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = BonjourSDK/Info.plist;
+				INFOPLIST_FILE = "BonjourSDK iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BonjourSDK_iOS;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -316,41 +340,54 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = BonjourSDK/Info.plist;
+				INFOPLIST_FILE = "BonjourSDK iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BonjourSDK_iOS;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		DFAD5D8119EA0EF600DE514E /* Debug */ = {
+		DFAD5D9919EA0F0F00DE514E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = BonjourSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "BonjourSDK OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = BonjourSDK_OSX;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		DFAD5D8219EA0EF600DE514E /* Release */ = {
+		DFAD5D9A19EA0F0F00DE514E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BonjourSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "BonjourSDK OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = BonjourSDK_OSX;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -366,7 +403,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DFAD5D7D19EA0EF600DE514E /* Build configuration list for PBXNativeTarget "BonjourSDK" */ = {
+		DFAD5D7D19EA0EF600DE514E /* Build configuration list for PBXNativeTarget "BonjourSDK iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFAD5D7E19EA0EF600DE514E /* Debug */,
@@ -374,11 +411,11 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		DFAD5D8019EA0EF600DE514E /* Build configuration list for PBXNativeTarget "BonjourSDKTests" */ = {
+		DFAD5D9819EA0F0F00DE514E /* Build configuration list for PBXNativeTarget "BonjourSDK OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DFAD5D8119EA0EF600DE514E /* Debug */,
-				DFAD5D8219EA0EF600DE514E /* Release */,
+				DFAD5D9919EA0F0F00DE514E /* Debug */,
+				DFAD5D9A19EA0F0F00DE514E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
