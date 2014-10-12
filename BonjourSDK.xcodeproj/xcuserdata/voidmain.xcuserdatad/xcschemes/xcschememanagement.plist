@@ -4,35 +4,60 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BonjourSDK OSX.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>BonjourSDK iOS.xcscheme</key>
+		<key>BonjourSDK_OSX.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>BonjourSDK_iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>BonjourSDK_iOSTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>DFAD5D6919EA0EF600DE514E</key>
+		<key>DF7D1C9B19EA466300EB0487</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DFAD5D7419EA0EF600DE514E</key>
+		<key>DF7D1CA619EA466300EB0487</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DFAD5D8719EA0F0F00DE514E</key>
+		<key>DFB9F51819EA48AF001F8A04</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DFAD5D9119EA0F0F00DE514E</key>
+		<key>DFB9F52219EA48AF001F8A04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DFB9F57F19EA4C2F001F8A04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DFB9F58919EA4C2F001F8A04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DFB9F59D19EA4CB4001F8A04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DFB9F5A719EA4CB5001F8A04</key>
 		<dict>
 			<key>primary</key>
 			<true/>
