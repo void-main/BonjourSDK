@@ -83,14 +83,14 @@
     NSString *typeString = [self typeStringFromTypeName:serviceType transportProtocol:transportProtocol];
     self.serviceBrowser = [[NSNetServiceBrowser alloc] init];
     [self.serviceBrowser setDelegate:self];
-    [self.serviceBrowser searchForServicesOfType:typeString inDomain:@""];
     self.serviceBrowserDelegate = delegate;
+    
+    [self.serviceBrowser searchForServicesOfType:typeString inDomain:@""];
 }
 
 - (void)stopSearch:(NSString *)serviceType transportProtocol:(NSString *)transportProtocol {
     if (self.serviceBrowser) {
         [self.serviceBrowser stop];
-        self.serviceBrowser = nil;
     }
 }
 
