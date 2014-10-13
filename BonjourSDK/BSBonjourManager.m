@@ -57,9 +57,11 @@
     [self createSocketsAndStreams:&port];
 
     if (port < 0) {
-        *error = [NSError errorWithDomain:kBSBonjourPublishDomain
-                            code:kBSBonjourPublishSocketCreateFailed
-                        userInfo:nil];
+        if (error) {
+            *error = [NSError errorWithDomain:kBSBonjourPublishDomain
+                                         code:kBSBonjourPublishSocketCreateFailed
+                                     userInfo:nil];
+        }
         return;
     }
 
@@ -134,9 +136,11 @@
         [outStream open];
     }
     else {
-        *error = [NSError errorWithDomain:kBSBonjourConnectDomain
-                                     code:kBSBonjourConnectErrorConnectFailed
-                                 userInfo:nil];
+        if (error) {
+            *error = [NSError errorWithDomain:kBSBonjourConnectDomain
+                                         code:kBSBonjourConnectErrorConnectFailed
+                                     userInfo:nil];
+        }
     }
 }
 
