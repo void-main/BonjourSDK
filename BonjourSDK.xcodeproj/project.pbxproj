@@ -413,6 +413,7 @@
 				DFB9F5B019EA4CB5001F8A04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

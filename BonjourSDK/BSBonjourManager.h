@@ -11,6 +11,7 @@
 #define kBSBonjourPublishDomain @"BSBonjourPublish"
 #define kBSBonjourPublishErrorRegisterFailed -1
 #define kBSBonjourPublishErrorPublishFailed  -2
+#define kBSBonjourPublishSocketCreateFailed  -3
 
 #define kBSBonjourBrowseDomain @"BSBonjourBrowse"
 #define kBSBonjourBrowseErrorBrowseFailed -1
@@ -38,7 +39,10 @@
 
 @end
 
-@interface BSBonjourManager : NSObject <NSNetServiceDelegate, NSNetServiceBrowserDelegate>
+@interface BSBonjourManager : NSObject <NSNetServiceDelegate, NSNetServiceBrowserDelegate> {
+    CFSocketRef _listeningIPv4Socket;
+    CFSocketRef _listeningIPv6Socket;
+}
 
 @property (nonatomic, strong) NSMutableDictionary *publishedServices;
 @property (nonatomic, strong) NSMutableDictionary *publishDelegates;
@@ -50,7 +54,7 @@
 + (id)sharedManager;
 
 // Bonjour Publish
-- (void)publish:(NSString *)serviceType transportProtocol:(NSString *)transportProtocol port:(uint16_t)port delegate:(id<BSBonjourPublishDelegate>)delegate;
+- (void)publish:(NSString *)serviceType transportProtocol:(NSString *)transportProtocol delegate:(id<BSBonjourPublishDelegate>)delegate streamDelegate:(id<NSStreamDelegate>)streamDelegate error:(NSError **)error;
 - (void)reclaim:(NSString *)serviceType transportProtocol:(NSString *)transportProtocol;
 
 // Bonjour Search
