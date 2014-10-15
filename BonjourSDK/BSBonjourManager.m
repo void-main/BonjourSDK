@@ -20,8 +20,6 @@
 
 @interface BSBonjourManager (SocketAndStream)
 
-@property (nonatomic, weak) id<NSStreamDelegate> streamDelegate;
-
 - (void)createSocketsAndStreams:(int *)port;
 
 @end
@@ -92,6 +90,8 @@
     NSString *typeString = [self typeStringFromTypeName:serviceType transportProtocol:transportProtocol];
     NSNetService *serviceToReclaim = [self.publishedServices objectForKey:[typeString stringByAppendingString:@"."]];
     [serviceToReclaim stop];
+
+    [self disposeListeningSocket];
 }
 
 #pragma mark -
@@ -228,7 +228,7 @@
     struct sockaddr_in  addr;
     struct sockaddr_in6 addr6;
 
-    port = 0;
+    *port = 0;
 
     // Create a IPv4 Socket
     fd = socket(AF_INET, SOCK_STREAM, 0);
@@ -351,23 +351,58 @@
     }
 }
 
+- (void)disposeListeningSocket
+{
+    CFSocketInvalidate(_listeningIPv4Socket);
+    CFRelease(_listeningIPv4Socket);
+    _listeningIPv4Socket = NULL;
+
+    CFSocketInvalidate(_listeningIPv6Socket);
+    CFRelease(_listeningIPv6Socket);
+    _listeningIPv4Socket = NULL;
+
+    if (_inputStream) {
+        [_inputStream close];
+        [_inputStream removeFromRunLoop:[NSRunLoop currentRunLoop]
+                                forMode:NSDefaultRunLoopMode];
+        _inputStream = nil;
+    }
+
+    if (_outputStream) {
+        [_outputStream close];
+        [_outputStream removeFromRunLoop:[NSRunLoop currentRunLoop]
+                                 forMode:NSDefaultRunLoopMode];
+        _outputStream = nil;
+    }
+}
+
 void AcceptCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef address, const void *data, void *info)
 {
     int fd = * (const int *)data; // IPv4 or IPv6
     CFReadStreamRef   readStream;
     CFWriteStreamRef  writeStream;
-    NSInputStream *   inputStream;
-    NSOutputStream *  outputStream;
-
-    CFStreamCreatePairWithSocket(NULL, fd, &readStream, &writeStream);
-    inputStream = CFBridgingRelease(readStream);
-    outputStream = CFBridgingRelease(writeStream);
-
-    [inputStream setProperty:(id)kCFBooleanTrue forKey:(NSString *)kCFStreamPropertyShouldCloseNativeSocket];
 
     BSBonjourManager *manager = (__bridge BSBonjourManager *)info;
-    [inputStream setDelegate:manager.streamDelegate];
-    [outputStream setDelegate:manager.streamDelegate];
+
+    assert(manager.inputStream == NULL);
+    assert(manager.outputStream == NULL);
+
+    CFStreamCreatePairWithSocket(NULL, fd, &readStream, &writeStream);
+    manager.inputStream = CFBridgingRelease(readStream);
+    manager.outputStream = CFBridgingRelease(writeStream);
+
+    [manager.inputStream setProperty:(id)kCFBooleanTrue forKey:(NSString *)kCFStreamPropertyShouldCloseNativeSocket];
+
+    [manager.inputStream scheduleInRunLoop:[NSRunLoop currentRunLoop]
+                        forMode:NSDefaultRunLoopMode];
+    [manager.outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop]
+                         forMode:NSDefaultRunLoopMode];
+
+    [manager.inputStream  setDelegate:manager.streamDelegate];
+    [manager.outputStream setDelegate:manager.streamDelegate];
+
+    [manager.inputStream open];
+    [manager.outputStream open];
 }
 
 

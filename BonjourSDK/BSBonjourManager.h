@@ -50,6 +50,10 @@
 @property (nonatomic, strong) NSNetServiceBrowser        *serviceBrowser;
 @property (nonatomic, strong) id<BSBonjourBrowseDelegate> serviceBrowserDelegate;
 
+@property (nonatomic, strong) id<NSStreamDelegate> streamDelegate;
+@property (nonatomic, strong) NSInputStream  *inputStream;
+@property (nonatomic, strong) NSOutputStream *outputStream;
+
 // Singleton Method
 + (id)sharedManager;
 
