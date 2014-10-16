@@ -199,7 +199,6 @@ void readStreamEventHandler(CFReadStreamRef stream, CFStreamEventType eventType,
 {
     if ( event == kCFStreamEventOpenCompleted ) {
         _readStreamOpen = YES;
-        _incomingDataBuffer = [[NSMutableData alloc] init];
 
         [self.delegate connectionEstablished:self];
     } else if ( event == kCFStreamEventHasBytesAvailable ) {
@@ -232,6 +231,8 @@ void readStreamEventHandler(CFReadStreamRef stream, CFStreamEventType eventType,
 
     [self.delegate receivedData:[_incomingDataBuffer copy]
                   viaConnection:self];
+
+    _incomingDataBuffer = [[NSMutableData alloc] init];
 }
 
 
