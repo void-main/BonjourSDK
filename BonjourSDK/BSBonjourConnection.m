@@ -139,7 +139,7 @@ void writeStreamEventHandler(CFWriteStreamRef stream, CFStreamEventType eventTyp
     | kCFStreamEventCanAcceptBytes | kCFStreamEventEndEncountered
     | kCFStreamEventErrorOccurred;
 
-    CFStreamClientContext ctx = {0, (__bridge void *)(self), NULL, NULL, NULL};
+    CFStreamClientContext ctx = {0, (void *)CFBridgingRetain(self), NULL, NULL, NULL};
 
     CFReadStreamSetClient(_readStream, registeredEvents, readStreamEventHandler, &ctx);
     CFWriteStreamSetClient(_writeStream, registeredEvents, writeStreamEventHandler, &ctx);
@@ -199,6 +199,8 @@ void readStreamEventHandler(CFReadStreamRef stream, CFStreamEventType eventType,
 {
     if ( event == kCFStreamEventOpenCompleted ) {
         _readStreamOpen = YES;
+
+        [self.delegate connectionEstablished:self];
     } else if ( event == kCFStreamEventHasBytesAvailable ) {
         [self readFromStreamIntoIncomingBuffer];
     } else if ( event == kCFStreamEventEndEncountered || event == kCFStreamEventErrorOccurred ) {

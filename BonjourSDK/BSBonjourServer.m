@@ -25,6 +25,8 @@
         self.serviceType = serviceType;
         self.transportProtocol = transportProtocol;
         self.delegate = delegate;
+
+        _connections = [[NSMutableSet alloc] init];
     }
 
     return self;
@@ -85,6 +87,12 @@
 
 #pragma mark -
 #pragma mark BSBonjourConnectionDelegate
+- (void) connectionEstablished:(BSBonjourConnection *)connection {
+    if (self.delegate) {
+        [self.delegate connectionEstablished:connection];
+    }
+}
+
 - (void) connectionAttemptFailed:(BSBonjourConnection *)connection {
     if (self.delegate) {
         [self.delegate connectionAttemptFailed:connection];
@@ -297,7 +305,9 @@ void AcceptCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef address,
 
     // for an AcceptCallBack, the data parameter is a pointer to a CFSocketNativeHandle
     CFSocketNativeHandle nativeSocketHandle = *(CFSocketNativeHandle *)data;
+    BSBonjourServer *service = (__bridge BSBonjourServer *)info;
     BSBonjourConnection *connection = [[BSBonjourConnection alloc] initWithNativeSocketHandle:nativeSocketHandle];
+    connection.delegate = service;
 
     // In case of errors, close native socket handle
     if ( connection == nil ) {
@@ -312,7 +322,6 @@ void AcceptCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef address,
         return;
     }
 
-    BSBonjourServer *service = (__bridge BSBonjourServer *)info;
     [service addConnection:connection];
 }
 

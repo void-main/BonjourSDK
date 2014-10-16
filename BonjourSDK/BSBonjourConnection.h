@@ -12,6 +12,7 @@
 
 @protocol BSBonjourConnectionDelegate
 
+- (void) connectionEstablished:(BSBonjourConnection *)connection;
 - (void) connectionAttemptFailed:(BSBonjourConnection *)connection;
 - (void) connectionTerminated:(BSBonjourConnection *)connection;
 - (void) receivedData:(NSData *)data viaConnection:(BSBonjourConnection *)connection;
