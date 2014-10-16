@@ -8,19 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		DF7D1CA219EA466300EB0487 /* BonjourSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = DF7D1CA119EA466300EB0487 /* BonjourSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFB9F51119EA4749001F8A04 /* BSBonjourManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DFB9F50F19EA4749001F8A04 /* BSBonjourManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFB9F51219EA4749001F8A04 /* BSBonjourManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB9F51019EA4749001F8A04 /* BSBonjourManager.m */; };
-		DFB9F5B419EA4CE6001F8A04 /* BSBonjourManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DFB9F50F19EA4749001F8A04 /* BSBonjourManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFABBDCA19EF57E3000D77E3 /* BSBonjourServer.h in Headers */ = {isa = PBXBuildFile; fileRef = DFABBDC819EF57E3000D77E3 /* BSBonjourServer.h */; };
+		DFABBDCB19EF57E3000D77E3 /* BSBonjourServer.m in Sources */ = {isa = PBXBuildFile; fileRef = DFABBDC919EF57E3000D77E3 /* BSBonjourServer.m */; };
+		DFABBDCE19EF5889000D77E3 /* BSBonjourConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = DFABBDCC19EF5889000D77E3 /* BSBonjourConnection.h */; };
+		DFABBDCF19EF5889000D77E3 /* BSBonjourConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = DFABBDCD19EF5889000D77E3 /* BSBonjourConnection.m */; };
+		DFABBDD219EF94F8000D77E3 /* BSBonjourClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DFABBDD019EF94F8000D77E3 /* BSBonjourClient.h */; };
+		DFABBDD319EF94F8000D77E3 /* BSBonjourClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DFABBDD119EF94F8000D77E3 /* BSBonjourClient.m */; };
 		DFB9F5B519EA4CE9001F8A04 /* BonjourSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = DF7D1CA119EA466300EB0487 /* BonjourSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFB9F5B619EA4CEF001F8A04 /* BSBonjourManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB9F51019EA4749001F8A04 /* BSBonjourManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DF7D1C9C19EA466300EB0487 /* BonjourSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BonjourSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7D1CA019EA466300EB0487 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF7D1CA119EA466300EB0487 /* BonjourSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BonjourSDK.h; sourceTree = "<group>"; };
-		DFB9F50F19EA4749001F8A04 /* BSBonjourManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBonjourManager.h; sourceTree = "<group>"; };
-		DFB9F51019EA4749001F8A04 /* BSBonjourManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBonjourManager.m; sourceTree = "<group>"; };
+		DFABBDC819EF57E3000D77E3 /* BSBonjourServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBonjourServer.h; sourceTree = "<group>"; };
+		DFABBDC919EF57E3000D77E3 /* BSBonjourServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBonjourServer.m; sourceTree = "<group>"; };
+		DFABBDCC19EF5889000D77E3 /* BSBonjourConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBonjourConnection.h; sourceTree = "<group>"; };
+		DFABBDCD19EF5889000D77E3 /* BSBonjourConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBonjourConnection.m; sourceTree = "<group>"; };
+		DFABBDD019EF94F8000D77E3 /* BSBonjourClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBonjourClient.h; sourceTree = "<group>"; };
+		DFABBDD119EF94F8000D77E3 /* BSBonjourClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBonjourClient.m; sourceTree = "<group>"; };
 		DFB9F59E19EA4CB4001F8A04 /* BonjourSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BonjourSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB9F5A119EA4CB5001F8A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,8 +71,12 @@
 			isa = PBXGroup;
 			children = (
 				DF7D1CA119EA466300EB0487 /* BonjourSDK.h */,
-				DFB9F50F19EA4749001F8A04 /* BSBonjourManager.h */,
-				DFB9F51019EA4749001F8A04 /* BSBonjourManager.m */,
+				DFABBDCC19EF5889000D77E3 /* BSBonjourConnection.h */,
+				DFABBDCD19EF5889000D77E3 /* BSBonjourConnection.m */,
+				DFABBDC819EF57E3000D77E3 /* BSBonjourServer.h */,
+				DFABBDC919EF57E3000D77E3 /* BSBonjourServer.m */,
+				DFABBDD019EF94F8000D77E3 /* BSBonjourClient.h */,
+				DFABBDD119EF94F8000D77E3 /* BSBonjourClient.m */,
 				DF7D1C9F19EA466300EB0487 /* Supporting Files */,
 			);
 			path = BonjourSDK;
@@ -104,7 +114,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF7D1CA219EA466300EB0487 /* BonjourSDK.h in Headers */,
-				DFB9F51119EA4749001F8A04 /* BSBonjourManager.h in Headers */,
+				DFABBDD219EF94F8000D77E3 /* BSBonjourClient.h in Headers */,
+				DFABBDCA19EF57E3000D77E3 /* BSBonjourServer.h in Headers */,
+				DFABBDCE19EF5889000D77E3 /* BSBonjourConnection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +125,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFB9F5B519EA4CE9001F8A04 /* BonjourSDK.h in Headers */,
-				DFB9F5B419EA4CE6001F8A04 /* BSBonjourManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFB9F51219EA4749001F8A04 /* BSBonjourManager.m in Sources */,
+				DFABBDCB19EF57E3000D77E3 /* BSBonjourServer.m in Sources */,
+				DFABBDCF19EF5889000D77E3 /* BSBonjourConnection.m in Sources */,
+				DFABBDD319EF94F8000D77E3 /* BSBonjourClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +234,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFB9F5B619EA4CEF001F8A04 /* BSBonjourManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
