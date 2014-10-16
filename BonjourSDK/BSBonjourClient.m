@@ -92,6 +92,7 @@
     }
 
     _connection = [[BSBonjourConnection alloc] initWithNetService:service];
+    _connection.delegate = self;
     [_connection connect];
 }
 
@@ -108,6 +109,12 @@
 
 #pragma mark -
 #pragma mark BSBonjourConnectionDelegate
+- (void)connectionEstablished:(BSBonjourConnection *)connection {
+    if (self.delegate) {
+        [self.delegate connectionEstablished:connection];
+    }
+}
+
 - (void) connectionAttemptFailed:(BSBonjourConnection *)connection {
     if (self.delegate) {
         [self.delegate connectionAttemptFailed:connection];
